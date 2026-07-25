@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Education Research | AHIES Research Platform</title>
+
+    <link rel="stylesheet" href="education.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <h2 class="logo">AHIES Research Platform</h2>
+
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="education.html" class="active">Education</a>
+                <a href="../Health/health.html">Health</a>
+                <a href="../Labour/labour.html">Labour</a>
+                <a href="../Dashboard/dashboard.html">Dashboard</a>
+                <a href="../About/about.html">About</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Hero -->
+    <section class="page-hero">
+
+        <div class="hero-content">
+
+            <p class="section-label">AHIES 2022–2024</p>
+
+            <h1>Education Research</h1>
+
+            <p>
+                Explore educational participation, attainment, barriers to
+                schooling, and education financing using Ghana's Annual
+                Household Income and Expenditure Survey.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Filters -->
+    <section class="filter-section">
+
+        <div class="filter-container">
+
+            <div>
+                <label for="year-filter">Survey Year</label>
+
+                <select id="year-filter">
+                    <option value="all">All Years</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+                </select>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <main class="research-container">
+
+        <!-- Overview Indicators -->
+        <section class="indicator-section">
+
+            <p class="section-label">Education Overview</p>
+
+            <h2>Key Indicators</h2>
+
+            <p class="section-description">
+                Select a survey year to explore education indicators across
+                the AHIES study period.
+            </p>
+
+
+            <div class="indicator-grid">
+
+                <div class="indicator-card">
+
+                    <p>Total Records</p>
+
+                    <h3 id="total-records">Loading...</h3>
+
+                </div>
+
+
+                <div class="indicator-card">
+
+                    <p>Currently in School</p>
+
+                    <h3 id="currently-school">Loading...</h3>
+
+                </div>
+
+
+                <div class="indicator-card">
+
+                    <p>Ever Attended School</p>
+
+                    <h3 id="ever-attended">Loading...</h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Participation Trend -->
+        <section class="chart-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">Participation</p>
+                    <h2>Education Participation by Year</h2>
+                </div>
+
+            </div>
+
+
+            <div class="chart-card">
+
+                <canvas id="educationChart"></canvas>
+
+            </div>
+
+        </section>
+
+
+        <!-- Research Finding 1 -->
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">Research Question 1</p>
+
+                    <h2>School Attendance During the Previous Three Months</h2>
+                </div>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="attendanceChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>Key Finding</h3>
+
+                    <p>
+                        School attendance remained relatively stable between
+                        2022 and 2024, with approximately 47–49% of respondents
+                        reporting attendance during the previous three months.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Research Finding 2 -->
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">Research Question 2</p>
+
+                    <h2>Highest Educational Attainment</h2>
+                </div>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="attainmentChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>Key Finding</h3>
+
+                    <p>
+                        Primary education remained the most common highest
+                        level of educational attainment across the study
+                        period, while only about 6% of respondents had
+                        attained tertiary education.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Research Finding 3 -->
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">Research Question 3</p>
+
+                    <h2>Reasons for Never Attending School</h2>
+
+                    <p class="section-description">
+                        Analysis available for 2023 and 2024.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="barriersChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>Key Finding</h3>
+
+                    <p>
+                        Family restrictions were the leading reported barrier
+                        to school attendance in both 2023 and 2024. Financial
+                        difficulties and perceptions that education was not
+                        valuable were also important barriers.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Research Finding 4 -->
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="section-label">Research Question 4</p>
+
+                    <h2>Who Finances Education?</h2>
+                </div>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="financeChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>Key Finding</h3>
+
+                    <p>
+                        Fathers remained the largest single source of education
+                        financing. However, the proportion financed jointly by
+                        both parents increased from 19.05% in 2022 to 27.56%
+                        in 2024.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Annual Data Table -->
+        <section class="table-section">
+
+            <p class="section-label">Underlying Data</p>
+
+            <h2>Annual Education Indicators</h2>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Year</th>
+                            <th>Total Records</th>
+                            <th>Currently in School</th>
+                            <th>Ever Attended School</th>
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="education-table">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            AHIES Research Platform | Ghana AHIES 2022–2024
+        </p>
+
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="education.js"></script>
+
+    <link rel="stylesheet" href="../assistant/assistant.css">
+<script src="../assistant/assistant.js"></script>
+
+</body>
+
+</html>

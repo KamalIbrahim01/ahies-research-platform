@@ -1,0 +1,241 @@
+/* ==========================================
+   FLOATING ASSISTANT
+========================================== */
+
+#assistant-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+}
+
+/* ==========================================
+   FLOATING BUTTON
+========================================== */
+
+#assistant-toggle {
+    width: 64px;
+    height: 64px;
+    border: none;
+    border-radius: 50%;
+    background: #075c52;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .25);
+    transition: .3s;
+}
+
+#assistant-toggle:hover {
+    transform: scale(1.08);
+    background: #06473f;
+}
+
+/* ==========================================
+   WINDOW
+========================================== */
+
+#assistant-window {
+    position: absolute;
+    bottom: 80px;
+    right: 0;
+
+    width: 380px;
+    height: 560px;
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    display: none;
+    flex-direction: column;
+
+    box-shadow: 0 18px 45px rgba(0,0,0,.22);
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.assistant-header {
+    background: #075c52;
+    color: #fff;
+    padding: 18px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.assistant-header h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+#assistant-close {
+    border: none;
+    background: transparent;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+#assistant-content {
+    flex: 1;
+    overflow-y: auto;
+    padding: 20px;
+    background: #f7f9fb;
+}
+
+/* ==========================================
+   INTRO
+========================================== */
+
+.assistant-body {
+    margin-bottom: 20px;
+}
+
+.assistant-body p {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* ==========================================
+   CATEGORY / QUESTION BUTTONS
+========================================== */
+
+.assistant-option {
+
+    width: 100%;
+
+    text-align: left;
+
+    padding: 14px 16px;
+
+    margin-bottom: 12px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #fff;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    transition: .25s;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+
+}
+
+.assistant-option:hover {
+
+    background: #075c52;
+
+    color: #fff;
+
+    transform: translateX(4px);
+
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.assistant-back {
+
+    border: none;
+
+    background: transparent;
+
+    color: #075c52;
+
+    font-weight: 600;
+
+    margin-bottom: 20px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+}
+
+.assistant-back:hover {
+
+    text-decoration: underline;
+
+}
+
+/* ==========================================
+   ANSWER
+========================================== */
+
+.assistant-answer {
+
+    margin-top: 20px;
+
+    padding: 18px;
+
+    background: #fff;
+
+    border-left: 5px solid #075c52;
+
+    border-radius: 10px;
+
+    line-height: 1.8;
+
+    white-space: pre-line;
+
+    box-shadow: 0 2px 8px rgba(0,0,0,.06);
+
+}
+
+#assistant-content h4 {
+
+    margin-bottom: 15px;
+
+    color: #075c52;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+#assistant-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+#assistant-content::-webkit-scrollbar-thumb {
+    background: #c7c7c7;
+    border-radius: 8px;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    #assistant-window {
+
+        width: calc(100vw - 30px);
+
+        height: 75vh;
+
+        right: 0;
+
+        bottom: 80px;
+
+    }
+
+}

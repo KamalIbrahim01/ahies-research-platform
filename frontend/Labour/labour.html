@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Labour Research | AHIES Research Platform</title>
+
+    <link rel="stylesheet" href="labour.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <h2 class="logo">
+                AHIES Research Platform
+            </h2>
+
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="../Education/education.html">Education</a>
+                <a href="../Health/health.html">Health</a>
+                <a href="labour.html" class="active">Labour</a>
+                <a href="../Dashboard/dashboard.html">Dashboard</a>
+                <a href="../About/about.html">About</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Hero -->
+
+    <section class="page-hero">
+
+        <div class="hero-content">
+
+            <p class="section-label">
+                AHIES 2022–2024
+            </p>
+
+            <h1>
+                Labour Research
+            </h1>
+
+            <p>
+                Explore employment, job-seeking activity and social
+                protection indicators using Ghana's Annual Household
+                Income and Expenditure Survey.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Year Filter -->
+
+    <section class="filter-section">
+
+        <div class="filter-container">
+
+            <div>
+
+                <label for="year-filter">
+                    Survey Year
+                </label>
+
+                <select id="year-filter">
+
+                    <option value="all">
+                        All Years
+                    </option>
+
+                    <option value="2022">
+                        2022
+                    </option>
+
+                    <option value="2023">
+                        2023
+                    </option>
+
+                    <option value="2024">
+                        2024
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Main Content -->
+
+    <main class="research-container">
+
+
+        <!-- Labour Overview -->
+
+        <section class="indicator-section">
+
+            <p class="section-label">
+                Labour Overview
+            </p>
+
+            <h2>
+                Key Indicators
+            </h2>
+
+            <p class="section-description">
+                Select a survey year to examine employment,
+                job-seeking and social security indicators across
+                the AHIES survey period.
+            </p>
+
+
+            <div class="indicator-grid">
+
+
+                <div class="indicator-card">
+
+                    <p>
+                        Total Records
+                    </p>
+
+                    <h3 id="total-records">
+                        Loading...
+                    </h3>
+
+                </div>
+
+
+                <div class="indicator-card">
+
+                    <p>
+                        Worked for Pay
+                    </p>
+
+                    <h3 id="worked-for-pay">
+                        Loading...
+                    </h3>
+
+                </div>
+
+
+                <div class="indicator-card">
+
+                    <p>
+                        Actively Looking for Work
+                    </p>
+
+                    <h3 id="looking-for-work">
+                        Loading...
+                    </h3>
+
+                </div>
+
+
+                <div class="indicator-card">
+
+                    <p>
+                        Social Security
+                    </p>
+
+                    <h3 id="social-security">
+                        Loading...
+                    </h3>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- Trend Chart -->
+
+        <section class="chart-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Trend Analysis
+                </p>
+
+                <h2>
+                    Labour Indicators by Year
+                </h2>
+
+                <p class="section-description">
+                    Annual comparison of employment activity,
+                    active job seeking and social security indicators.
+                </p>
+
+            </div>
+
+
+            <div class="chart-card">
+
+                <canvas id="labourChart"></canvas>
+
+            </div>
+
+        </section>
+
+
+        <!-- Research Analysis -->
+
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Labour Market Research
+                </p>
+
+                <h2>
+                    Detailed Analysis
+                </h2>
+
+                <p class="section-description">
+                    Additional labour-market research questions and
+                    findings from the AHIES dataset will be presented
+                    here as the analysis is completed.
+                </p>
+
+            </div>
+
+
+            <div class="analysis-status-card">
+
+                <h3>
+                    Analysis in Progress
+                </h3>
+
+                <p>
+                    The research team is currently conducting detailed
+                    SQL analysis of employment, job-seeking behaviour
+                    and social protection indicators. Results will be
+                    incorporated into this section when the analysis
+                    has been validated.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Underlying Data -->
+
+        <section class="table-section">
+
+            <p class="section-label">
+                Underlying Data
+            </p>
+
+            <h2>
+                Annual Labour Indicators
+            </h2>
+
+            <p class="section-description">
+                Aggregated annual values retrieved from the AHIES
+                research database.
+            </p>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>
+                                Year
+                            </th>
+
+                            <th>
+                                Total Records
+                            </th>
+
+                            <th>
+                                Worked for Pay
+                            </th>
+
+                            <th>
+                                Looking for Work
+                            </th>
+
+                            <th>
+                                Social Security
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="labour-table">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            AHIES Research Platform | Ghana AHIES 2022–2024
+        </p>
+
+    </footer>
+
+
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <!-- Labour JavaScript -->
+
+    <script src="labour.js"></script>
+    <link rel="stylesheet" href="../assistant/assistant.css">
+<script src="../assistant/assistant.js"></script>
+
+</body>
+
+</html>

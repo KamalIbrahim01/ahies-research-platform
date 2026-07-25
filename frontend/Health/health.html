@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Health Research | AHIES Research Platform</title>
+
+    <link rel="stylesheet" href="health.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+
+    <header class="navbar">
+
+        <div class="nav-container">
+
+            <h2 class="logo">AHIES Research Platform</h2>
+
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="../Education/education.html">Education</a>
+                <a href="health.html" class="active">Health</a>
+                <a href="../Labour/labour.html">Labour</a>
+                <a href="../Dashboard/dashboard.html">Dashboard</a>
+                <a href="../About/about.html">About</a>
+            </nav>
+
+        </div>
+
+    </header>
+
+
+    <!-- Hero -->
+
+    <section class="page-hero">
+
+        <div class="hero-content">
+
+            <p class="section-label">AHIES 2022–2024</p>
+
+            <h1>Health Research</h1>
+
+            <p>
+                Explore illness patterns, healthcare consultation and health
+                insurance coverage using Ghana's Annual Household Income and
+                Expenditure Survey.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- Filter -->
+
+    <section class="filter-section">
+
+        <div class="filter-container">
+
+            <div>
+
+                <label for="year-filter">
+                    Survey Year
+                </label>
+
+                <select id="year-filter">
+
+                    <option value="all">All Years</option>
+                    <option value="2022">2022</option>
+                    <option value="2023">2023</option>
+                    <option value="2024">2024</option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Main -->
+
+    <main class="research-container">
+
+
+        <!-- Health Overview -->
+
+        <section class="indicator-section">
+
+            <p class="section-label">
+                Health Overview
+            </p>
+
+            <h2>
+                Key Indicators
+            </h2>
+
+            <p class="section-description">
+                Select a survey year to examine key health indicators
+                reported within the AHIES dataset.
+            </p>
+
+
+            <div class="indicator-grid">
+
+                <div class="indicator-card">
+
+                    <p>Total Records</p>
+
+                    <h3 id="total-records">
+                        Loading...
+                    </h3>
+
+                </div>
+
+
+                <div class="indicator-card">
+
+                    <p>Recent Illness</p>
+
+                    <h3 id="recent-illness">
+                        Loading...
+                    </h3>
+
+                </div>
+
+
+                <div class="indicator-card">
+
+                    <p>NHIS Covered</p>
+
+                    <h3 id="nhis-covered">
+                        Loading...
+                    </h3>
+
+                </div>
+
+
+                <div class="indicator-card">
+
+                    <p>Consulted Health Practitioner</p>
+
+                    <h3 id="consulted-practitioner">
+                        Loading...
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Overview Chart -->
+
+        <section class="chart-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Trend Analysis
+                </p>
+
+                <h2>
+                    Health Indicators by Year
+                </h2>
+
+                <p class="section-description">
+                    Annual comparison of reported illness, current NHIS
+                    coverage and healthcare consultation.
+                </p>
+
+            </div>
+
+
+            <div class="chart-card">
+
+                <canvas id="healthChart"></canvas>
+
+            </div>
+
+        </section>
+
+
+        <!-- RQ1 -->
+
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Research Question 1
+                </p>
+
+                <h2>
+                    Reported Illness by Sex
+                </h2>
+
+                <p class="section-description">
+                    Comparison of recent illness among male and female
+                    respondents across the AHIES survey period.
+                </p>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="illnessSexChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>
+                        Key Finding
+                    </h3>
+
+                    <p>
+                        Female respondents consistently represented a larger
+                        share of reported illness cases than male respondents
+                        across the survey period.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RQ2 -->
+
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Research Question 2
+                </p>
+
+                <h2>
+                    Healthcare Consultation
+                </h2>
+
+                <p class="section-description">
+                    Examining healthcare consultation among respondents
+                    reporting illness during the survey period.
+                </p>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="consultationChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>
+                        Key Finding
+                    </h3>
+
+                    <p>
+                        Just over half of respondents reporting illness
+                        consulted a health practitioner, with the consultation
+                        rate declining slightly across the study period.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RQ3 -->
+
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Research Question 3
+                </p>
+
+                <h2>
+                    Current NHIS Coverage
+                </h2>
+
+                <p class="section-description">
+                    Examining current National Health Insurance Scheme
+                    coverage among respondents across the AHIES survey period.
+                </p>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="insuranceChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>
+                        Key Finding
+                    </h3>
+
+                    <p>
+                        Current NHIS coverage remained relatively stable
+                        across the survey period. This indicator measures
+                        current coverage rather than insurance retention.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RQ4 -->
+
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Research Question 4
+                </p>
+
+                <h2>
+                    Healthcare Provider Utilization
+                </h2>
+
+                <p class="section-description">
+                    Analysis of the types of healthcare providers used by
+                    respondents who sought healthcare.
+                </p>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="providerChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>
+                        Analysis Pending
+                    </h3>
+
+                    <p>
+                        Provider-level results will be added after the
+                        corresponding AHIES variable used in the completed
+                        health analysis is mapped to the research database.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Underlying Data -->
+
+        <section class="table-section">
+
+            <p class="section-label">
+                Underlying Data
+            </p>
+
+            <h2>
+                Annual Health Indicators
+            </h2>
+
+
+            <div class="table-wrapper">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Year</th>
+
+                            <th>Total Records</th>
+
+                            <th>Recent Illness</th>
+
+                            <th>NHIS Covered</th>
+
+                            <th>Consulted Practitioner</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="health-table">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+
+    <footer>
+
+        <p>
+            AHIES Research Platform | Ghana AHIES 2022–2024
+        </p>
+
+    </footer>
+
+
+    <!-- Chart.js -->
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+    <!-- Health JavaScript -->
+
+    <script src="health.js"></script>
+
+    <link rel="stylesheet" href="../assistant/assistant.css">
+<script src="../assistant/assistant.js"></script>
+
+</body>
+
+</html>

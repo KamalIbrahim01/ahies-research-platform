@@ -1,0 +1,585 @@
+/* ===================================================
+   GLOBAL STYLES
+=================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+    line-height: 1.7;
+}
+
+
+/* ===================================================
+   NAVIGATION
+=================================================== */
+
+.navbar {
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #075c52;
+}
+
+
+/* ===================================================
+   HERO SECTION
+=================================================== */
+
+.page-hero {
+    background: #064f47;
+    color: white;
+    padding: 80px 30px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 10px 0 20px;
+}
+
+.hero-content p:last-child {
+    max-width: 760px;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ===================================================
+   MAIN CONTENT
+=================================================== */
+
+.about-container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 60px 30px;
+}
+
+.content-section {
+    margin-bottom: 70px;
+}
+
+.content-section h2 {
+    font-size: 32px;
+    margin: 8px 0 20px;
+}
+
+.content-section p:not(.section-label) {
+    color: #555;
+    margin-bottom: 16px;
+    line-height: 1.8;
+}
+
+
+/* ===================================================
+   OBJECTIVES
+=================================================== */
+
+.objective-list {
+    margin-top: 20px;
+    margin-left: 25px;
+}
+
+.objective-list li {
+    margin-bottom: 14px;
+    color: #555;
+    line-height: 1.8;
+}
+
+
+/* ===================================================
+   STATISTICS
+=================================================== */
+
+.stats-section {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-bottom: 70px;
+
+}
+
+.stat-card {
+
+    background: white;
+
+    padding: 35px;
+
+    text-align: center;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+
+    transition: all .3s ease;
+
+}
+
+.stat-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+
+}
+
+.stat-card h3 {
+
+    font-size: 34px;
+
+    color: #075c52;
+
+    margin-bottom: 10px;
+
+}
+
+.stat-card p {
+
+    color: #666;
+
+}
+
+
+/* ===================================================
+   RESEARCH AREAS
+=================================================== */
+
+.research-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+}
+
+.research-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.07);
+
+    transition: all .3s ease;
+
+}
+
+.research-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.research-card h3 {
+
+    color: #075c52;
+
+    margin-bottom: 12px;
+
+}
+
+.research-card p {
+
+    color: #555;
+
+    line-height: 1.7;
+
+}
+
+
+/* ===================================================
+   METHODOLOGY NOTE
+=================================================== */
+
+.method-note {
+
+    background: #e8f3f1;
+
+    border-left: 6px solid #075c52;
+
+    padding: 35px;
+
+    border-radius: 8px;
+
+    margin-bottom: 70px;
+
+}
+
+.method-note h3 {
+
+    color: #075c52;
+
+    margin-bottom: 15px;
+
+    font-size: 24px;
+
+}
+
+.method-note p {
+
+    margin-bottom: 14px;
+
+    color: #444;
+
+}
+
+
+/* ===================================================
+   TECHNOLOGY STACK
+=================================================== */
+
+.technology-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+}
+
+.technology-grid div {
+
+    background: white;
+
+    padding: 25px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,.06);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-start;
+
+    min-height: 160px;
+
+    transition: all .3s ease;
+
+}
+
+.technology-grid div:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,.12);
+
+}
+
+.technology-grid strong {
+
+    color: #075c52;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+}
+
+.technology-grid span {
+
+    color: #666;
+
+    line-height: 1.6;
+
+    font-size: 15px;
+
+}
+/* ===================================================
+   FUTURE DEVELOPMENT
+=================================================== */
+
+.future-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    margin-top: 30px;
+
+}
+
+.future-card {
+
+    background: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+
+    transition: all 0.3s ease;
+
+}
+
+.future-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+
+}
+
+.future-card h3 {
+
+    color: #075c52;
+
+    margin-bottom: 12px;
+
+    font-size: 22px;
+
+}
+
+.future-card p {
+
+    color: #555;
+
+    line-height: 1.7;
+
+}
+
+
+/* ===================================================
+   DATA SOURCE
+=================================================== */
+
+.content-section:last-child {
+
+    margin-bottom: 40px;
+
+}
+
+
+/* ===================================================
+   LINKS
+=================================================== */
+
+a {
+
+    transition: all 0.3s ease;
+
+}
+
+a:hover {
+
+    text-decoration: none;
+
+}
+
+
+/* ===================================================
+   FOOTER
+=================================================== */
+
+footer {
+
+    background: #064f47;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+
+    margin-top: 30px;
+
+}
+
+footer p {
+
+    font-size: 15px;
+
+    letter-spacing: .3px;
+
+}
+
+
+/* ===================================================
+   RESPONSIVE DESIGN
+=================================================== */
+
+@media (max-width: 1000px) {
+
+    .research-grid,
+    .technology-grid,
+    .future-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .nav-container {
+
+        flex-direction: column;
+
+        gap: 20px;
+
+    }
+
+    nav {
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+
+        gap: 15px;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 36px;
+
+    }
+
+    .about-container {
+
+        padding: 45px 20px;
+
+    }
+
+    .stats-section,
+    .research-grid,
+    .technology-grid,
+    .future-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .page-hero {
+
+        padding: 60px 20px;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 30px;
+
+    }
+
+    .hero-content p:last-child {
+
+        font-size: 16px;
+
+    }
+
+    .content-section h2 {
+
+        font-size: 28px;
+
+    }
+
+    .stat-card h3 {
+
+        font-size: 28px;
+
+    }
+
+    .research-card,
+    .future-card,
+    .technology-grid div {
+
+        padding: 24px;
+
+    }
+
+    .method-note {
+
+        padding: 25px;
+
+    }
+
+    footer {
+
+        padding: 25px 15px;
+
+    }
+
+}
+
+
+/* ===================================================
+   SMOOTH SCROLLING
+=================================================== */
+
+html {
+
+    scroll-behavior: smooth;
+
+}

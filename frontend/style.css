@@ -1,0 +1,376 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fa;
+    color: #222;
+}
+
+
+/* ==============================
+   NAVIGATION
+============================== */
+
+.navbar {
+    background: white;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav a:hover,
+nav a.active {
+    color: #075c52;
+}
+
+
+/* ==============================
+   HERO
+============================== */
+
+.page-hero {
+    background: #064f47;
+    color: white;
+    padding: 80px 30px;
+}
+
+.hero-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 10px 0 20px;
+}
+
+.hero-content > p:not(.section-label) {
+    max-width: 700px;
+    line-height: 1.7;
+    font-size: 18px;
+}
+
+.section-label {
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.primary-button,
+.secondary-button {
+    display: inline-block;
+    padding: 13px 22px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-button {
+    background: white;
+    color: #064f47;
+}
+
+.secondary-button {
+    background: transparent;
+    color: white;
+    border: 1px solid white;
+}
+
+.primary-button:hover {
+    background: #f0f5f4;
+}
+
+.secondary-button:hover {
+    background: white;
+    color: #064f47;
+}
+
+
+/* ==============================
+   SHARED SECTION STYLES
+============================== */
+
+.section-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-container > h2 {
+    font-size: 32px;
+    margin-top: 7px;
+}
+
+.section-description {
+    margin-top: 10px;
+    margin-bottom: 30px;
+    max-width: 750px;
+    color: #666;
+    line-height: 1.7;
+}
+
+
+/* ==============================
+   DATASET OVERVIEW
+============================== */
+
+.overview-section {
+    padding: 60px 30px;
+}
+
+.stat-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.stat-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.stat-card h3 {
+    color: #075c52;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.stat-card p {
+    color: #666;
+}
+
+
+/* ==============================
+   RESEARCH AREAS
+============================== */
+
+.research-section {
+    padding: 60px 30px 70px;
+    background: white;
+}
+
+.research-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.research-card {
+    background: #f5f7fa;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.card-number {
+    color: #075c52;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.research-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.research-card > p:not(.card-number) {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.research-card a {
+    color: #075c52;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.research-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   RESEARCH TOOLS
+============================== */
+
+.tools-section {
+    padding: 60px 30px 70px;
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.tool-card {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+}
+
+.tool-card h3 {
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.tool-card p {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 22px;
+}
+
+.tool-card a {
+    color: #075c52;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tool-card a:hover {
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   ABOUT PREVIEW
+============================== */
+
+.about-section {
+    background: white;
+    padding: 60px 30px;
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 50px;
+}
+
+.about-container h2 {
+    font-size: 32px;
+    margin: 7px 0 15px;
+}
+
+.about-container > div > p:last-child {
+    max-width: 750px;
+    color: #555;
+    line-height: 1.7;
+}
+
+.about-button {
+    display: inline-block;
+    flex-shrink: 0;
+
+    background: #075c52;
+    color: white;
+
+    padding: 13px 22px;
+
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.about-button:hover {
+    background: #064f47;
+}
+
+
+/* ==============================
+   FOOTER
+============================== */
+
+footer {
+    background: #064f47;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* ==============================
+   RESPONSIVE
+============================== */
+
+@media (max-width: 1000px) {
+
+    .nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .stat-grid,
+    .research-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .hero-content h1 {
+        font-size: 36px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
