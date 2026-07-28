@@ -219,14 +219,17 @@ nav a.active {
 
 
 .chart-card {
-    background: white;
-    padding: 30px;
 
-    border-radius: 10px;
+    background:white;
 
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+    padding:30px;
 
-    height: 450px;
+    border-radius:10px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.07);
+
+    height:380px;
+
 }
 
 
@@ -235,7 +238,71 @@ nav a.active {
     height: 100% !important;
 }
 
+/* ======================================================
+   RESEARCH GRID
+====================================================== */
 
+.research-grid {
+
+    display: grid;
+
+    grid-template-columns: 2fr 1fr;
+
+    gap: 30px;
+
+    align-items: stretch;
+
+}
+
+
+.insight-card {
+
+    background: #eef8f6;
+
+    border-left: 5px solid #075c52;
+
+    border-radius: 10px;
+
+    padding: 35px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+
+}
+
+
+.insight-card h3 {
+
+    color: #064f47;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.insight-card p {
+
+    color: #555;
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+
+}
+
+
+.insight-card p:last-child{
+
+    margin-bottom:0;
+
+}
 /* DETAILED RESEARCH ANALYSIS */
 
 .research-section {
@@ -351,6 +418,11 @@ footer {
     .indicator-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .research-grid{
+
+    grid-template-columns:1fr;
+
+}
 
 }
 
