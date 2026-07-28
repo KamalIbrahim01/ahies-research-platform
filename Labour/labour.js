@@ -1,6 +1,10 @@
-const LABOUR_API =
-    "http://127.0.0.1:5000/api/labour";
+const BASE_URL =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+        ? "http://127.0.0.1:5000"
+        : "https://ahies-research-api-enfbb7htfsacf3g7.spaincentral-01.azurewebsites.net";
 
+const LABOUR_API = `${BASE_URL}/api/labour`;
 
 let labourData = [];
 let labourChart;

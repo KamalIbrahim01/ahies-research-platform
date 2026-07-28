@@ -1,11 +1,12 @@
-const EDUCATION_API =
-    "http://127.0.0.1:5000/api/education";
+const BASE_URL =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+        ? "http://127.0.0.1:5000"
+        : "https://ahies-research-api-enfbb7htfsacf3g7.spaincentral-01.azurewebsites.net";
 
-const ATTAINMENT_API =
-    "http://127.0.0.1:5000/api/education/attainment";
-
-const BARRIERS_API =
-    "http://127.0.0.1:5000/api/education/barriers";
+const EDUCATION_API = `${BASE_URL}/api/education`;
+const ATTAINMENT_API = `${BASE_URL}/api/education/attainment`;
+const BARRIERS_API = `${BASE_URL}/api/education/barriers`;
 
 
 let educationData = [];

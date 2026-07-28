@@ -1,12 +1,12 @@
-const HEALTH_API =
-    "http://127.0.0.1:5000/api/health";
+const BASE_URL =
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1"
+        ? "http://127.0.0.1:5000"
+        : "https://ahies-research-api-enfbb7htfsacf3g7.spaincentral-01.azurewebsites.net";
 
-const ILLNESS_SEX_API =
-    "http://127.0.0.1:5000/api/health/illness-by-sex";
-
-const COVERAGE_API =
-    "http://127.0.0.1:5000/api/health/coverage";
-
+const HEALTH_API = `${BASE_URL}/api/health`;
+const ILLNESS_SEX_API = `${BASE_URL}/api/health/illness-by-sex`;
+const COVERAGE_API = `${BASE_URL}/api/health/coverage`;
 
 let healthData = [];
 let illnessSexData = [];
