@@ -14,7 +14,7 @@ const API_BASE =
 
 const CHAT_API = `${API_BASE}/api/chat`;
 const KNOWLEDGE_API = `${API_BASE}/api/knowledge`;
-
+let KNOWLEDGE = {};
 // =========================================
 // Load Knowledge
 // =========================================
