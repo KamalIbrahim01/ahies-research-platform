@@ -6,17 +6,14 @@
 // Configuration
 // =========================================
 
-const BASE_URL =
+const API_BASE =
     window.location.hostname === "localhost" ||
     window.location.hostname === "127.0.0.1"
         ? "http://127.0.0.1:5000"
-        : "";
+        : "https://ahies-research-api-enfbb7htfsacf3g7.spaincentral-01.azurewebsites.net";
 
-const CHAT_API = `${BASE_URL}/api/chat`;
-const KNOWLEDGE_API = `${BASE_URL}/api/knowledge`;
-
-let KNOWLEDGE = {};
-
+const CHAT_API = `${API_BASE}/api/chat`;
+const KNOWLEDGE_API = `${API_BASE}/api/knowledge`;
 
 // =========================================
 // Load Knowledge
