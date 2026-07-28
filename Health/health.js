@@ -16,6 +16,7 @@ let healthChart;
 let illnessSexChart;
 let consultationChart;
 let insuranceChart;
+let providerChart;
 
 
 // ======================================================
@@ -118,7 +119,7 @@ function updatePage(selectedYear) {
     }
 
 
-    updateIndicators(filteredData);
+     updateIndicators(filteredData);
 
     updateTable(filteredData);
 
@@ -129,6 +130,8 @@ function updatePage(selectedYear) {
     updateConsultationChart(selectedYear);
 
     updateInsuranceChart(selectedYear);
+
+    updateProviderChart(selectedYear);
 
 }
 
@@ -805,11 +808,6 @@ function updateInsuranceChart(
     ];
 
 
-    /*
-       Calculate the percentage of each coverage
-       status within each year.
-    */
-
     const datasets =
         statuses.map(status => {
 
@@ -863,10 +861,12 @@ function updateInsuranceChart(
 
 
                         return yearTotal > 0
+
                             ? (
                                 statusTotal /
                                 yearTotal
                             ) * 100
+
                             : 0;
 
                     })
@@ -919,12 +919,14 @@ function updateInsuranceChart(
                                 function(context) {
 
                                     return (
+
                                         context.dataset.label +
                                         ": " +
                                         Number(
                                             context.raw
                                         ).toFixed(2) +
                                         "%"
+
                                     );
 
                                 }
@@ -974,6 +976,201 @@ function updateInsuranceChart(
 }
 
 
+
+// ======================================================
+// RQ4
+// HEALTHCARE UTILIZATION TRENDS
+// ======================================================
+
+function updateProviderChart(
+    selectedYear
+) {
+
+    let data =
+        healthData;
+
+
+    if (selectedYear !== "all") {
+
+        data =
+            healthData.filter(
+
+                row =>
+                    String(row.year) ===
+                    selectedYear
+
+            );
+
+    }
+
+
+    const canvas =
+        document.getElementById(
+            "providerChart"
+        );
+
+
+    if (!canvas) {
+
+        return;
+
+    }
+
+
+if (providerChart) {
+
+    providerChart.destroy();
+
+}
+
+providerChart =
+    new Chart(canvas, {
+
+            type: "line",
+
+            data: {
+
+                labels:
+
+                    data.map(
+                        row => row.year
+                    ),
+
+                datasets: [
+
+                    {
+
+                        label:
+                            "Reported Illness",
+
+                        data:
+
+                            data.map(
+
+                                row =>
+
+                                    Number(
+                                        row.recent_illness
+                                    )
+
+                            ),
+
+                        tension: 0.3,
+
+                        pointRadius: 5
+
+                    },
+
+                    {
+
+                        label:
+                            "Consulted Health Practitioner",
+
+                        data:
+
+                            data.map(
+
+                                row =>
+
+                                    Number(
+                                        row.consulted_health_practitioner
+                                    )
+
+                            ),
+
+                        tension: 0.3,
+
+                        pointRadius: 5
+
+                    }
+
+                ]
+
+            },
+
+
+            options: {
+
+                responsive: true,
+
+                maintainAspectRatio: false,
+
+                interaction: {
+
+                    mode: "index",
+
+                    intersect: false
+
+                },
+
+                plugins: {
+
+                    tooltip: {
+
+                        callbacks: {
+
+                            label:
+
+                                function(context) {
+
+                                    return (
+
+                                        context.dataset.label +
+                                        ": " +
+
+                                        Number(
+                                            context.raw
+                                        ).toLocaleString()
+
+                                    );
+
+                                }
+
+                        }
+
+                    }
+
+                },
+
+                scales: {
+
+                    y: {
+
+                        beginAtZero: true,
+
+                        title: {
+
+                            display: true,
+
+                            text:
+                                "Number of Respondents"
+
+                        },
+
+                        ticks: {
+
+                            callback:
+
+                                function(value) {
+
+                                    return value.toLocaleString();
+
+                                }
+
+                        }
+
+                    }
+
+                }
+
+            }
+
+        });
+
+}
+
+
+
 // ======================================================
 // YEAR FILTER
 // ======================================================
@@ -992,6 +1189,7 @@ document
 
         }
     );
+
 
 
 // ======================================================

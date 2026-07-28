@@ -8,11 +8,14 @@
     <title>Labour Research | AHIES Research Platform</title>
 
     <link rel="stylesheet" href="labour.css">
+    <link rel="stylesheet" href="../assistant/assistant.css">
 </head>
 
 <body>
 
-    <!-- Navigation -->
+    <!-- ======================================================
+         NAVIGATION
+    ======================================================= -->
 
     <header class="navbar">
 
@@ -36,7 +39,9 @@
     </header>
 
 
-    <!-- Hero -->
+    <!-- ======================================================
+         HERO
+    ======================================================= -->
 
     <section class="page-hero">
 
@@ -51,9 +56,10 @@
             </h1>
 
             <p>
-                Explore employment, job-seeking activity and social
-                protection indicators using Ghana's Annual Household
-                Income and Expenditure Survey.
+                Explore employment status, employment sectors,
+                occupational structure and employment-related benefits
+                using Ghana's Annual Household Income and Expenditure
+                Survey.
             </p>
 
         </div>
@@ -61,7 +67,9 @@
     </section>
 
 
-    <!-- Year Filter -->
+    <!-- ======================================================
+         YEAR FILTER
+    ======================================================= -->
 
     <section class="filter-section">
 
@@ -100,12 +108,16 @@
     </section>
 
 
-    <!-- Main Content -->
+    <!-- ======================================================
+         MAIN CONTENT
+    ======================================================= -->
 
     <main class="research-container">
 
 
-        <!-- Labour Overview -->
+        <!-- ==================================================
+             LABOUR OVERVIEW
+        =================================================== -->
 
         <section class="indicator-section">
 
@@ -119,8 +131,8 @@
 
             <p class="section-description">
                 Select a survey year to examine employment,
-                job-seeking and social security indicators across
-                the AHIES survey period.
+                job-seeking and social protection indicators
+                across the AHIES survey period.
             </p>
 
 
@@ -184,7 +196,9 @@
         </section>
 
 
-        <!-- Trend Chart -->
+        <!-- ==================================================
+             LABOUR TREND CHART
+        =================================================== -->
 
         <section class="chart-section">
 
@@ -200,7 +214,8 @@
 
                 <p class="section-description">
                     Annual comparison of employment activity,
-                    active job seeking and social security indicators.
+                    active job seeking and social security indicators
+                    between 2022 and 2024.
                 </p>
 
             </div>
@@ -215,24 +230,298 @@
         </section>
 
 
-        <!-- Research Analysis -->
+        <!-- ==================================================
+             RESEARCH QUESTION 1
+             EMPLOYMENT STATUS
+        =================================================== -->
 
         <section class="research-section">
 
             <div class="section-heading">
 
                 <p class="section-label">
-                    Labour Market Research
+                    Research Question 1
                 </p>
 
                 <h2>
-                    Detailed Analysis
+                    Employment Status
                 </h2>
 
                 <p class="section-description">
-                    Additional labour-market research questions and
-                    findings from the AHIES dataset will be presented
-                    here as the analysis is completed.
+                    What was the distribution of employment status
+                    among employed respondents between 2022 and 2024?
+                </p>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="employmentStatusChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>
+                        Key Finding
+                    </h3>
+
+                    <p>
+                        Self-employment remained the dominant form of
+                        employment throughout the survey period.
+                        Agricultural self-employment increased from
+                        29.69% in 2022 to 34.16% in 2024, while
+                        non-agricultural self-employment also recorded
+                        modest growth.
+                    </p>
+
+                    <p>
+                        Paid employment remained relatively stable at
+                        approximately 14–15%, while agricultural family
+                        work declined over the period.
+                    </p>
+
+                    <p>
+                        Overall, employment growth occurred mainly
+                        through informal and self-employed activities
+                        rather than formal wage employment.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             RESEARCH QUESTION 2
+             EMPLOYMENT SECTORS
+        =================================================== -->
+
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Research Question 2
+                </p>
+
+                <h2>
+                    Employment Sectors
+                </h2>
+
+                <p class="section-description">
+                    What were the major employment sectors among
+                    employed respondents between 2022 and 2024?
+                </p>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="employmentSectorChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>
+                        Key Finding
+                    </h3>
+
+                    <p>
+                        The Private Informal sector consistently
+                        accounted for approximately 90% of employment
+                        across the survey period.
+                    </p>
+
+                    <p>
+                        Public Government and Private Formal employment
+                        each represented approximately 5%, while NGOs,
+                        religious organisations, international
+                        organisations and other sectors collectively
+                        represented less than 1%.
+                    </p>
+
+                    <p>
+                        The distribution indicates that Ghana's labour
+                        market remained overwhelmingly dominated by
+                        private informal employment, with limited
+                        expansion of formal employment.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             RESEARCH QUESTION 3
+             OCCUPATIONAL STRUCTURE
+        =================================================== -->
+
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Research Question 3
+                </p>
+
+                <h2>
+                    Major Occupations
+                </h2>
+
+                <p class="section-description">
+                    What were the major occupations of employed
+                    respondents between 2022 and 2024?
+                </p>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="occupationChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>
+                        Key Finding
+                    </h3>
+
+                    <p>
+                        Skilled agricultural, forestry and fishery
+                        workers consistently represented the largest
+                        occupational group, accounting for more than
+                        half of employed respondents.
+                    </p>
+
+                    <p>
+                        Service and sales occupations increased
+                        gradually, while craft and related trades
+                        workers consistently represented approximately
+                        11% of employment.
+                    </p>
+
+                    <p>
+                        Professional occupations accounted for only
+                        about 4–5%, while managers, technicians and
+                        clerical workers represented relatively small
+                        shares of employment.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             RESEARCH QUESTION 4
+             EMPLOYMENT BENEFITS
+        =================================================== -->
+
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Research Question 4
+                </p>
+
+                <h2>
+                    Employment-Related Benefits
+                </h2>
+
+                <p class="section-description">
+                    To what extent did employed respondents receive
+                    employment-related benefits between 2022 and 2024?
+                </p>
+
+            </div>
+
+
+            <div class="research-grid">
+
+                <div class="chart-card">
+
+                    <canvas id="employmentBenefitsChart"></canvas>
+
+                </div>
+
+
+                <div class="insight-card">
+
+                    <h3>
+                        Key Finding
+                    </h3>
+
+                    <p>
+                        Employment contracts were the most widely
+                        available employment benefit among eligible
+                        respondents.
+                    </p>
+
+                    <p>
+                        Social security, paid leave and paid sick leave
+                        were received by less than half of eligible
+                        workers, while employer-sponsored health
+                        insurance and medical benefits were the least
+                        accessible benefits.
+                    </p>
+
+                    <p>
+                        The findings indicate that although some workers
+                        had formal employment arrangements, access to
+                        comprehensive employment protections remained
+                        limited.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ==================================================
+             OVERALL RESEARCH CONCLUSION
+        =================================================== -->
+
+        <section class="research-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">
+                    Research Summary
+                </p>
+
+                <h2>
+                    Overall Labour Market Findings
+                </h2>
+
+                <p class="section-description">
+                    Combined interpretation of the four labour-market
+                    research questions across the 2022–2024 AHIES
+                    survey period.
                 </p>
 
             </div>
@@ -241,15 +530,24 @@
             <div class="analysis-status-card">
 
                 <h3>
-                    Analysis in Progress
+                    Overall Conclusion
                 </h3>
 
                 <p>
-                    The research team is currently conducting detailed
-                    SQL analysis of employment, job-seeking behaviour
-                    and social protection indicators. Results will be
-                    incorporated into this section when the analysis
-                    has been validated.
+                    The combined findings indicate that Ghana's labour
+                    market between 2022 and 2024 remained predominantly
+                    informal, self-employment driven and agriculture-based.
+                    While employment participation remained relatively
+                    stable, there was limited evidence of structural
+                    transformation toward formal employment or widespread
+                    improvements in employment quality.
+                </p>
+
+                <p>
+                    Expanding formal job opportunities, strengthening
+                    worker protections and promoting economic
+                    diversification remain important priorities for
+                    sustainable labour market development.
                 </p>
 
             </div>
@@ -257,7 +555,9 @@
         </section>
 
 
-        <!-- Underlying Data -->
+        <!-- ==================================================
+             UNDERLYING DATA
+        =================================================== -->
 
         <section class="table-section">
 
@@ -322,7 +622,9 @@
     </main>
 
 
-    <!-- Footer -->
+    <!-- ======================================================
+         FOOTER
+    ======================================================= -->
 
     <footer>
 
@@ -333,16 +635,15 @@
     </footer>
 
 
-    <!-- Chart.js -->
+    <!-- ======================================================
+         SCRIPTS
+    ======================================================= -->
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-
-    <!-- Labour JavaScript -->
-
     <script src="labour.js"></script>
-    <link rel="stylesheet" href="../assistant/assistant.css">
-<script src="../assistant/assistant.js"></script>
+
+    <script src="../assistant/assistant.js"></script>
 
 </body>
 
